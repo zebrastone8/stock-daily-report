@@ -98,6 +98,7 @@ a:hover {
 }
 
 .hero-panel {
+  min-width: 0;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -197,6 +198,7 @@ h3 {
 }
 
 .section {
+  min-width: 0;
   margin: 18px 0;
   padding: 20px;
   background: var(--surface);
@@ -294,6 +296,7 @@ h3 {
 }
 
 .signal {
+  min-width: 0;
   padding: 10px 12px;
   border: 1px solid var(--line);
   border-radius: 7px;
@@ -382,6 +385,7 @@ h3 {
 }
 
 .card {
+  min-width: 0;
   padding: 14px;
   border: 1px solid var(--line);
   border-radius: 7px;
@@ -631,10 +635,6 @@ tr:last-child td {
   .dek {
     margin-bottom: 12px;
     font-size: 14px;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .brief-list {
@@ -659,10 +659,6 @@ tr:last-child td {
   .brief-text {
     font-size: 12px;
     line-height: 1.45;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
   }
 
   .metric-grid,
@@ -676,9 +672,21 @@ tr:last-child td {
 
   .score-card {
     display: grid;
-    grid-template-columns: 86px minmax(0, 1fr);
-    align-items: center;
+    grid-template-columns: 1fr;
     gap: 12px;
+  }
+
+  .score-card > div:first-child {
+    display: grid;
+    grid-template-columns: 86px minmax(0, 1fr);
+    column-gap: 12px;
+    row-gap: 4px;
+    align-items: end;
+  }
+
+  .score-card .eyebrow {
+    grid-column: 1 / -1;
+    margin-bottom: 2px;
   }
 
   .score-card .score-value {
@@ -686,6 +694,7 @@ tr:last-child td {
   }
 
   .score-card .muted {
+    grid-column: 2;
     margin-bottom: 0;
     font-size: 12px;
   }
