@@ -384,6 +384,20 @@ h3 {
   gap: 12px;
 }
 
+.market-group + .market-group {
+  margin-top: 18px;
+}
+
+.market-group-title {
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 760;
+}
+
+.market-card-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .card {
   min-width: 0;
   padding: 14px;
@@ -545,6 +559,21 @@ tr:last-child td {
   margin: 6px 0;
 }
 
+.note-list {
+  display: grid;
+  gap: 10px;
+}
+
+.note-item {
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.note-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
 .muted {
   color: var(--muted);
 }
@@ -615,6 +644,10 @@ tr:last-child td {
   .metric-grid,
   .card-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .market-card-grid {
+    grid-template-columns: 1fr;
   }
 }
 
