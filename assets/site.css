@@ -509,6 +509,35 @@ h3 {
   font-size: 13px;
 }
 
+.headline-feedback {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.headline-feedback button {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--muted);
+  cursor: pointer;
+  font: inherit;
+  font-size: 11px;
+  padding: 4px 9px;
+}
+
+.headline-feedback button:hover,
+.headline-feedback button.is-active {
+  border-color: #9db7ff;
+  background: #eef4ff;
+  color: #155eef;
+}
+
+.headline.is-muted {
+  opacity: 0.48;
+}
+
 .source {
   font-size: 12px;
   font-weight: 650;
@@ -765,7 +794,8 @@ tr:last-child td {
   }
 
   .topbar,
-  .button-row {
+  .button-row,
+  .headline-feedback {
     display: none;
   }
 
